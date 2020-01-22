@@ -1,0 +1,22 @@
+{
+  "name": "tekisbot-sls",
+  "version": "0.0.1",
+  "description": "A bot for tekis",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SNurmivaara/tekisbot-sls.git"
+  },
+  "author": "Sami Nurmivaara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SNurmivaara/tekisbot-sls/issues"
+  },
+  "homepage": "https://github.com/SNurmivaara/tekisbot-sls#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
