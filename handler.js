@@ -4,7 +4,7 @@ const axios = require("axios");
 
 module.exports.hello = async event => {
   const token = process.env.TELEGRAM_TOKEN;
-  const base_url = process.env.BASE_URL;
+  const base_url = `https://api.telegram.org/bot${token}`;
 
   try {
     data = event.body;
@@ -23,10 +23,11 @@ module.exports.hello = async event => {
     url = base_url + `/sendMessage`;
 
     axios.post(url, data);
+    return { statusCode: 200 };
   } catch {
     console.log("error!");
   }
-  return { statusCode: 200 };
+  return { statusCode: 500 };
 
   // Use this code if you don't use the http event with the LAMBDA-PROXY integration
   // return { message: 'Go Serverless v1.0! Your function executed successfully!', event };
