@@ -8,7 +8,7 @@ module.exports.hello = async event => {
 
   try {
     data = event.body;
-    message = JSON.stringify(data.message.text);
+    message = data.message.text;
     chat_id = data.message.chat.id;
     first_name = data.message.chat.first_name;
 
@@ -16,13 +16,13 @@ module.exports.hello = async event => {
 
     if (message.contains(start)) response = `Hello ${first_name}`;
 
-    data = {
+    answer = {
       text: response,
       chat_id: chat_id
     };
     url = base_url + `/hello`;
 
-    axios.post(url, data);
+    axios.post(url, answer);
     return { statusCode: 200 };
   } catch (e) {
     console.log(e, event.body);
