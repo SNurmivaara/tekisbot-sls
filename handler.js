@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports.hello = (context, req, event) => {
+module.exports.hello = event => {
   const token = process.env.TELEGRAM_TOKEN;
   return {
     statusCode: 200,
