@@ -5,10 +5,9 @@ const axios = require("axios");
 module.exports.hello = async event => {
   const token = process.env.TELEGRAM_TOKEN;
   const base_url = `https://api.telegram.org/bot${token}`;
-  console.log(JSON.parse(event.body));
 
   try {
-    data = event.body;
+    data = JSON.parse(event.body);
     message = JSON.stringify(data.message.text);
     chat_id = data.message.chat.id;
     first_name = data.message.chat.first_name;
@@ -26,7 +25,7 @@ module.exports.hello = async event => {
     axios.post(url, data);
     return { statusCode: 200 };
   } catch {
-    console.log("error!" + event.body);
+    console.log("error!" + JSON.parse(event.body));
   }
   return { statusCode: 500 };
 };
