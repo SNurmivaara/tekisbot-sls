@@ -6,10 +6,9 @@ app: tekisbot
 provider:
   name: aws
   runtime: nodejs12.x
-
-# you can overwrite defaults here
-#  stage: dev
-region: eu-north-1
+  stage: dev
+  profile: default
+  region: eu-north-1
 
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:
