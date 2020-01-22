@@ -43,7 +43,8 @@ functions:
     events:
       - http:
           path: /hello
-          method: get
+          method: post
+          cors: true
 #      - websocket: $connect
 #      - s3: ${env:BUCKET}
 #      - schedule: rate(10 minutes)
