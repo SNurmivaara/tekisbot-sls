@@ -1,13 +1,14 @@
 "use strict";
 
-module.exports.hello = (context, req) => {
+module.exports.hello = (context, req, event) => {
   const token = process.env.TELEGRAM_TOKEN;
   return {
     statusCode: 200,
     body: JSON.stringify(
       {
         message: "Go Serverless v1.0! Your function executed successfully!",
-        token: token
+        token: token,
+        input: event
       },
       null,
       2
