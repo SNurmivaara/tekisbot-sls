@@ -25,7 +25,7 @@ module.exports.hello = async event => {
     axios.post(url, answer);
     return { statusCode: 200 };
   } catch (e) {
-    console.log(e, event.body.message.text);
+    console.log(e, event.body.message);
   }
   return { statusCode: 500 };
 };
