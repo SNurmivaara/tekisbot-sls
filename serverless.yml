@@ -8,7 +8,9 @@ provider:
   runtime: nodejs12.x
   stage: dev
   profile: nitor-sls-test
-  region: eu-north-1
+  region: eu-central-1
+  environment:
+    TELEGRAM_TOKEN: $(ssm:tekisbottoken)
 
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:
@@ -25,10 +27,6 @@ provider:
 #          - - "arn:aws:s3:::"
 #            - "Ref" : "ServerlessDeploymentBucket"
 #            - "/*"
-
-# you can define service wide environment variables here
-#  environment:
-#    variable1: value1
 
 # you can add packaging information here
 #package:
