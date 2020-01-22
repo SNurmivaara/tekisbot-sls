@@ -7,7 +7,7 @@ provider:
   name: aws
   runtime: nodejs12.x
   stage: dev
-  profile: default
+  profile: nitor-sls-test
   region: eu-north-1
 
 # you can add statements to the Lambda function's IAM Role here
