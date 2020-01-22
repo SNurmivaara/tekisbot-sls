@@ -18,7 +18,7 @@ module.exports.hello = async event => {
 
     let answer = {
       text: response,
-      chat_id: chat_id
+      chat_id: event.body.chat.id
     };
     let url = base_url + `/hello`;
 
