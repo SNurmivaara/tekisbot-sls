@@ -7,20 +7,20 @@ module.exports.hello = async event => {
   const base_url = `https://api.telegram.org/bot${token}`;
 
   try {
-    data = event.body;
-    message = data.message.text;
-    chat_id = data.message.chat.id;
-    first_name = data.message.chat.first_name;
+    let data = event.body;
+    let message = data.message.text;
+    let chat_id = data.message.chat.id;
+    let first_name = data.message.chat.first_name;
 
-    response = `TKO-äly bot at your service, type in /start`;
+    let response = `TKO-äly bot at your service, type in /start`;
 
     if (message.contains(start)) response = `Hello ${first_name}`;
 
-    answer = {
+    let answer = {
       text: response,
       chat_id: chat_id
     };
-    url = base_url + `/hello`;
+    let url = base_url + `/hello`;
 
     axios.post(url, answer);
     return { statusCode: 200 };
