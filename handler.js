@@ -26,7 +26,7 @@ module.exports.hello = async event => {
     axios.post(url, data);
     return { statusCode: 200 };
   } catch {
-    console.log("error! with chat " + chat_id);
+    console.log("error!" + event.body);
   }
   return { statusCode: 500 };
 };
