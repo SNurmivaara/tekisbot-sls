@@ -8,9 +8,9 @@ module.exports.hello = async event => {
 
   try {
     let data = event.body;
-    let message = data.message.text;
-    let chat_id = data.message.chat.id;
-    let first_name = data.message.chat.first_name;
+    let message = JSON.stringify(data.message.text);
+    let chat_id = JSON.stringify(data.message.chat.id);
+    let first_name = JSON.stringify(data.message.chat.first_name);
 
     let response = `TKO-äly bot at your service, type in /start`;
 
