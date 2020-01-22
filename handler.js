@@ -5,7 +5,7 @@ const axios = require("axios");
 module.exports.hello = async event => {
   const token = process.env.TELEGRAM_TOKEN;
   const base_url = `https://api.telegram.org/bot${token}`;
-  console.log(event);
+  console.log(JSON.parse(event.body));
 
   try {
     data = event.body;
