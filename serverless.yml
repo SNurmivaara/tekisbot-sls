@@ -12,9 +12,6 @@ provider:
   environment:
     TELEGRAM_TOKEN: ${secrets:tgtoken}
 
-plugins:
-  - serverless-offline
-
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:
 #    - Effect: "Allow"
