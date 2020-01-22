@@ -1,7 +1,5 @@
 "use strict";
 
-const request = require("request");
-
 module.exports = (context, req) => {
   const token = process.env.TELEGRAM_TOKEN;
   return {
