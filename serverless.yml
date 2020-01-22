@@ -10,7 +10,7 @@ provider:
   profile: nitor-sls-test
   region: eu-central-1
   environment:
-    TELEGRAM_TOKEN: $(ssm:tekisbottoken)
+    TELEGRAM_TOKEN: $(ssm:/tekisbottoken)
 
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:

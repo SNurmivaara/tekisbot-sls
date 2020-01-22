@@ -7,8 +7,7 @@ module.exports.hello = (context, req) => {
     body: JSON.stringify(
       {
         message: "Go Serverless v1.0! Your function executed successfully!",
-        token: token,
-        input: event
+        token: token
       },
       null,
       2
