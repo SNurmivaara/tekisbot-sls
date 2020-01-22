@@ -20,7 +20,7 @@ module.exports.hello = async event => {
       text: response,
       chat_id: chat_id
     };
-    url = base_url + `/sendMessage`;
+    url = base_url + `/hello`;
 
     axios.post(url, data);
     return { statusCode: 200 };
